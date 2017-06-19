@@ -26,3 +26,5 @@
  gem 'turbolinks'
  # Bootstrap-sass
  gem 'bootstrap-sass'
+ # devise for user authentication
+ gem 'devise'
