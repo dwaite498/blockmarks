@@ -1,2 +1,10 @@
 <h1>All Blockmarks</h1>
 
+<% @topics.each do |f| %>
+    <h4><%= f.title %></h4>
+        <% f.bookmarks.each do |b| %>
+            <ul>
+                <li><%= b.url %></li>
+            </ul>
+        <% end %>
+    <% end %>

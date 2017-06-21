@@ -12,6 +12,7 @@
  # #2
  group :development do
    gem 'sqlite3'
+   gem 'faker', '~> 1.6', '>= 1.6.6'
  end
  
  # Use SCSS for stylesheets

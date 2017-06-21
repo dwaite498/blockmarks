@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  devise_for :users
+  resources :users
   get 'topics/index'
 
   get 'topics/show'
@@ -7,8 +9,8 @@ Rails.application.routes.draw do
 
   get 'topics/edit'
 
-  resources :users, only: [:show]
 
-  devise_for :users
+
+
   root 'welcome#index'
 end
