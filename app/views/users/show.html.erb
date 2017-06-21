@@ -1,0 +1,11 @@
+<h3><%= @user.email %></h3>
+<ul>
+    <li><%= link_to "Edit Profile", edit_user_registration_path %></li>
+</ul>
+
+<h3>My Bookmarks</h3>
+<ul>
+    <% @user.bookmarks.each do |f| %>
+        <h4><%= f.title %></h4>
+    <%= end %>
+</ul>
