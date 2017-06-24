@@ -11,14 +11,14 @@ User.create!(
     )
 
 user = User.all
-6.times do
+12.times do
     Topic.create!(
         :title => Faker::Commerce.unique.department,
         :user => user.sample
         )    
 end
 topic = Topic.all
-35.times do
+102.times do
    Bookmark.create!(
        :url => Faker::Internet.url,
        :topic_id => topic.sample.id

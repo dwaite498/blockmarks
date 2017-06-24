@@ -15,6 +15,11 @@ class TopicsController < ApplicationController
     @topic = Topic.new
     @topic.title  = params[:topic][:title]
     @topic.user = current_user
+    if @topic.save
+      redirect_to topics_path
+    else
+      render :new
+    end
   end
 
   def edit
@@ -23,6 +28,5 @@ class TopicsController < ApplicationController
   def destroy
     @topic = Topic.find(params[:id])
     @topic.destroy
-    redirect_to topics_path
   end
 end

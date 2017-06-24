@@ -6,10 +6,11 @@
 <h3>My Bookmarks</h3>
 <ul>
     <% @topics.each do |f| %>
-        <h4><%= f.title %><%= link_to "", topic_url(f), method: :delete, class: 'glyphicon glyphicon-remove' %></h4>
+        <h4><%= f.title %><%= link_to "", topic_url(f), :remote => true, method: :delete, class: 'glyphicon glyphicon-remove delete_item' %></h4>
         <% f.bookmarks.each do |b| %>
             <p><%= b.url %></p>
         <% end %>
         
     <% end %>
 </ul>
+
