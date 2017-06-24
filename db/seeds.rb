@@ -5,15 +5,20 @@ User.create!(
     :password => "hammer123"
     )
     
+User.create!(
+    :email => "dwaite498@gmail.com",
+    :password => "hammer123"
+    )
+
 user = User.all
-4.times do
+6.times do
     Topic.create!(
         :title => Faker::Commerce.unique.department,
         :user => user.sample
         )    
 end
 topic = Topic.all
-20.times do
+35.times do
    Bookmark.create!(
        :url => Faker::Internet.url,
        :topic_id => topic.sample.id

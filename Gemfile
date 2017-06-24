@@ -29,3 +29,4 @@
  gem 'bootstrap-sass'
  # devise for user authentication
  gem 'devise'
+ 

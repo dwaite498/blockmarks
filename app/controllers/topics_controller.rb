@@ -4,11 +4,25 @@ class TopicsController < ApplicationController
   end
 
   def show
+    @topic = Topic.find(params[:id])
   end
 
   def new
+    @topic = Topic.new
+  end
+  
+  def create
+    @topic = Topic.new
+    @topic.title  = params[:topic][:title]
+    @topic.user = current_user
   end
 
   def edit
+  end
+  
+  def destroy
+    @topic = Topic.find(params[:id])
+    @topic.destroy
+    redirect_to topics_path
   end
 end

@@ -1,7 +1,10 @@
 <h1>All Blockmarks</h1>
 
 <% @topics.each do |f| %>
-    <h4><%= f.title %></h4>
+    <h4><%=link_to f.title, topic_url(f) %>
+    <% if f.user == current_user %>
+        <%= link_to "", topic_url(f), method: :delete, class: 'glyphicon glyphicon-remove' %></h4>
+    <% end %>
         <% f.bookmarks.each do |b| %>
             <ul>
                 <li><%= b.url %></li>
