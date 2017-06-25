@@ -1,2 +1,7 @@
-<h1>Bookmarks#edit</h1>
-<p>Find me in app/views/bookmarks/edit.html.erb</p>
+<h1><%= @bookmark.url %></h1>
+<div class="container">
+    <%= simple_form_for [@topic, @bookmark] do |f| %>
+        <%= f.input :url, label: "URL" %>
+        <%= f.button :submit %>
+    <% end %>
+</div>
