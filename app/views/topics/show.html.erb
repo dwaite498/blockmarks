@@ -1,4 +1,8 @@
-<h2><%= @topic.title %></h2>
+<h2 class="topic-show"><%= @topic.title %>
+    <% if @topic.user == current_user %>
+        <%= link_to "", topic_path, :remote => true, method: :delete, class: 'glyphicon glyphicon-remove delete_item' %>
+    <% end %>
+</h2>
 <div class="container">
     <% @bookmarks.each do |bookmark| %>
         <h4><%=link_to bookmark.url, topic_bookmark_path(bookmark.topic, bookmark) %></h4>
