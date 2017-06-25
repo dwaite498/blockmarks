@@ -3,6 +3,7 @@
         <%= link_to "", topic_path, :remote => true, method: :delete, class: 'glyphicon glyphicon-remove delete_item' %>
     <% end %>
 </h2>
+<%=link_to "New Bookmark",  new_topic_bookmark_path(@topic) %>
 <div class="container">
     <% @bookmarks.each do |bookmark| %>
         <h4><%=link_to bookmark.url, topic_bookmark_path(bookmark.topic, bookmark) %></h4>
