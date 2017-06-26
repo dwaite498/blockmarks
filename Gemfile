@@ -31,3 +31,5 @@
  gem 'devise'
  #simple_form
  gem 'simple_form', '~> 3.2', '>= 3.2.1'
+ #figaro gem for environment variables
+ gem 'figaro', '1.0'
