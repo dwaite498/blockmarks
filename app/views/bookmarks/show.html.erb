@@ -1,3 +1,4 @@
 <h1><%= @bookmark.url %></h1>
 
 <%= link_to "Back to Topic", topic_path(@bookmark.topic) %>
+<%= link_to "Delete", topic_bookmark_path, method: :delete %>

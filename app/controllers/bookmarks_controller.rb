@@ -28,6 +28,13 @@ class BookmarksController < ApplicationController
     redirect_to :topic
   end
   
+  def destroy
+    @bookmark = Bookmark.find(params[:id])
+    @topic = @bookmark.topic_id
+    @bookmark.destroy
+    redirect_to topic_path(@topic)
+  end
+  
   private
   def bookmark_params
     params.require(:bookmark).permit(:url)
