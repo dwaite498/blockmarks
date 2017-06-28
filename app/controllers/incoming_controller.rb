@@ -9,7 +9,7 @@ class IncomingController < ApplicationController
      puts "INCOMING PARAMS HERE: #{params}"
 
     @user = User.find_by_email(params[:sender])
-    @topic = Topic.find_by_topic(params[:subject])
+    @topic = Topic.find_by_title(params[:subject])
     @url = params["stripped-text"]
     
     # You put the message-splitting and business
