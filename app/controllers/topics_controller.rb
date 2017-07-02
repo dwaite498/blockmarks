@@ -28,6 +28,7 @@ class TopicsController < ApplicationController
   
   def destroy
     @topic = Topic.find(params[:id])
+    authorize @topic
     @topic.destroy
   end
 end
