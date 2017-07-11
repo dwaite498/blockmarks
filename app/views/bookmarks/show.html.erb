@@ -2,3 +2,5 @@
 
 <%= link_to "Back to Topic", topic_path(@bookmark.topic) %>
 <%= link_to "Delete", topic_bookmark_path, method: :delete %>
+
+<%= render partial: 'likes/like', locals: { bookmark: @bookmark } %>

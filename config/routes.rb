@@ -12,7 +12,9 @@ Rails.application.routes.draw do
   resources :users
   
   resources :topics do
-    resources :bookmarks
+    resources :bookmarks do
+      resources :likes, only: [:index, :create, :destroy]
+    end
   end
 
   root 'welcome#index'
