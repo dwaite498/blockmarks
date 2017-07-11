@@ -5,7 +5,7 @@
             <h4><%=link_to f.title, topic_url(f) %>
 
                 <%= link_to "", topic_url(f), :remote => true, method: :delete, class: 'glyphicon glyphicon-remove delete_item' %>
-</h4>
+            </h4>
                 <% f.bookmarks[0..4].each do |b| %>
                     <ul>
                         <li><%= b.url %></li>
