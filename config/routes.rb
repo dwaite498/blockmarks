@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'likes/index'
+
   get 'bookmarks/show'
 
   get 'bookmarks/new'

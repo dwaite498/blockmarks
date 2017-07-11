@@ -24,6 +24,14 @@ class TopicsController < ApplicationController
   end
 
   def edit
+    @topic = Topic.find(params[:id])
+  end
+  
+  def update
+    @topic = Topic.find(params[:id])
+    @topic.title  = params[:topic][:title]
+    @topic.save
+    redirect_to @topic
   end
   
   def destroy
