@@ -18,7 +18,7 @@
     <h3>Liked Bookmarks</h3>
         <div class="wrapper">
             <% @liked_bookmarks.each do |f| %>
-                    <p><%= f.url %></p>
+                    <p><%= f.bookmark.url %></p>
             <% end %>
         </div>
 
