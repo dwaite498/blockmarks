@@ -19,7 +19,7 @@ class LikesController < ApplicationController
      @bookmark = Bookmark.find(params[:id])
      @like = current_user.likes.find(params[:id])
  
-     if like.destroy
+     if @like.destroy
        flash[:success] = "Bookmark liked!"
      else
        flash[:alert] = "Error, like not deleted!"
