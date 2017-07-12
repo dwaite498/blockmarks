@@ -24,3 +24,10 @@ topic = Topic.all
        :topic_id => topic.sample.id
        ) 
 end
+bookmark = Bookmark.all
+10.times do
+    Like.create!(
+        :user_id => user.first.id,
+        :bookmark_id => bookmark.sample.id
+        )
+end
