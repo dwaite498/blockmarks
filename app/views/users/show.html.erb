@@ -3,7 +3,7 @@
     <li><%= link_to "Edit Profile", edit_user_registration_path %></li>
 </ul>
 
-<h3>My Bookmarks</h3>
+<h3>My Topics</h3>
     <div class="wrapper">
     <% @topics.each do |f| %>
         <div class="topic-container">
@@ -17,14 +17,10 @@
     </div>
     <h3>Liked Bookmarks</h3>
         <div class="wrapper">
-            <% @liked_bookmarks.each do |f| %>
-                    <p><%= f.bookmark.url %></p>
-            <% end %>
+            <div class="topic-container">
+                <% @liked_bookmarks.each do |f| %>
+                        <p><%= f.bookmark.url %></p>
+                <% end %>
+            </div>
         </div>
-
-    <h3>Liked Bookmarks</h3>
-        <div class="wrapper">
-            <% @liked_bookmarks.each do |f| %>
-                    <p><%= f.bookmark.url %></p>
-            <% end %>
-        </div>
+        
