@@ -24,11 +24,11 @@ class LikesController < ApplicationController
      if @like.destroy
        flash[:success] = "Bookmark liked!"
        
-       redirect_to [@bookmark.topic, @bookmark]
+       redirect_to [@bookmark.topic]
      else
        flash[:alert] = "Error, like not deleted!"
        
-       redirect_to [@bookmark.topic, @bookmark]
+       redirect_to [@bookmark.topic]
      end
    end
 end

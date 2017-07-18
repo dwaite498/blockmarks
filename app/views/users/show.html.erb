@@ -19,7 +19,7 @@
         <div class="wrapper">
             <div class="topic-container">
                 <% @liked_bookmarks.each do |f| %>
-                        <p><%= f.bookmark.url %></p>
+                        <p><%=link_to f.bookmark.url, topic_bookmark_path(f.bookmark.topic, f.bookmark) %></p>
                 <% end %>
             </div>
         </div>
